@@ -15,7 +15,6 @@
     <% @tweets.each do |tweet| %>
       <tr>
         <td><%= tweet.body %></td>
-        <td><%= tweet.author %></td>
         <td><%= link_to 'Show', tweet %></td>
       </tr>
     <% end %>
