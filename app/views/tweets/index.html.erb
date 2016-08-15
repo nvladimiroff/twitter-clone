@@ -1,27 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tweets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th>Author</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.body %></td>
-        <td><%= link_to id_to_name(tweet.user_id), user_path(tweet.user_id) %>
-        <td><%= link_to 'Show', tweet %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<% @tweets.each do |tweet| %>
+  <%= render 'single_tweet', tweet: tweet %>
+  <br>
+<% end %>
 <br>
 
-<%= link_to 'New Tweet', new_tweet_path %>

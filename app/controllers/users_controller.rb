@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
       set_user
+      @tweets = Tweet.where(user_id: @user.id)
   end
 
   def new

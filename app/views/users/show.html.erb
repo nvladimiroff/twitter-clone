@@ -2,4 +2,9 @@
 
 <%= @user.username %><br>
 
+<% @tweets.each do |tweet| %>
+    <%= render 'single_tweet', tweet: tweet %>
+    <br>
+<% end %>
+
 <%= link_to 'New Tweet', new_tweet_path %>
