@@ -1,24 +1,3 @@
-# README
+# Twitter Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A super basic Twitter I wrote to learn basic Rails. You can register and log into accounts, create and view tweets, and view other user's tweets. The UI is really bare and there is no support for following other users right now.
