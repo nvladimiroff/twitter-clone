@@ -15,7 +15,13 @@ class TweetsController < ApplicationController
 
   # GET /tweets/new
   def new
-    @tweet = Tweet.new
+    if session[:user_id]
+      @tweet = Tweet.new
+      render 'new'
+    else
+      render 'not_signed_in'
+    end
+
   end
 
   # POST /tweets

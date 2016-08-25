@@ -1,16 +1,19 @@
 <% provide(:title, "Log in") %>
 <h1>Log in</h1>
-
 <div>
   <%= form_for(:session, url: login_path) do |f| %>
+    <div class="form-group">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: "form-control" %>
+    </div>
 
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "btn btn-default" %>
   <% end %>
-  </div>
 </div>
+
+<h4><%= flash[:danger] %></h4>

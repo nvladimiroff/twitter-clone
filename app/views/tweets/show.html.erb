@@ -1,6 +1,3 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @tweet.body %>
-</p>
+<%= render 'single_tweet', tweet: @tweet %>

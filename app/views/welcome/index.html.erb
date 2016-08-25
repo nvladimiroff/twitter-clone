@@ -1,2 +1,5 @@
-<h2>Twitter Clone</h2>
-<%= link_to 'Tweets', tweets_path %>
+<div class="jumbotron">
+  <h1>Welcome to Twitter Clone</h1>
+  <p>A really basic clone of Twitter in Rails. <%= link_to 'Create an account', signup_path %> to get started, or you can also view all the current tweets people have posted.</p>
+  <%= link_to 'Tweets', tweets_path, class: "btn btn-primary btn-lg", role: "button" %>
+</div>

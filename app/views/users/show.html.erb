@@ -1,10 +1,6 @@
-<h1>User</h1>
-
-<%= @user.username %><br>
+<h1><%= @user.username %></h1><br>
 
 <% @tweets.each do |tweet| %>
     <%= render 'single_tweet', tweet: tweet %>
     <br>
 <% end %>
-
-<%= link_to 'New Tweet', new_tweet_path %>

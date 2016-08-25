@@ -1,4 +1,9 @@
-<%= tweet.body %>
-<%= link_to id_to_name(tweet.user_id), user_path(tweet.user_id) %>
-<%= link_to 'Show', tweet %>
+<%= link_to tweet do %>
+  <div class="tweet-body panel panel-default">
+    <div class="panel-body">
+      <%= link_to id_to_name(tweet.user_id), user_path(tweet.user_id) %><span class='pull-right btn btn-default'> <%= link_to 'show', tweet %></span><br>
+      <%= tweet.body %>
+    </div>
+  </div>
+<% end %>
 
